@@ -14,7 +14,7 @@ const Footer = () => {
 
                         <ul>
                             <li>Fylla Digital</li>
-                            <li>Fylla DigitalMain Street</li>
+                            <li>Main Street</li>
                             <li>Main Street</li>
                             <li>16 Lisbon</li>
                         </ul>

@@ -4,6 +4,7 @@ const Banner = () => {
   return (
     <section className='banner py-16 border-b border-light'>
         <div className="container">
+
             <div className="grid grid-cols-2 gap-10">
 
                 <div className='banner-context max-w-[700px] w-full'>
@@ -26,6 +27,7 @@ const Banner = () => {
                 </div>
                  
             </div>
+            
         </div>
     </section>
   )

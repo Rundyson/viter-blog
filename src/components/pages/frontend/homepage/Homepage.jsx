@@ -5,20 +5,33 @@ import Banner from './Banner'
 import WhatWeDo from './WhatWeDo'
 import Work from './Work'
 import Values from './Values'
-import LatestNews from './LatestNews'
 import Footer from './Footer'
+import News from './News'
+import useQueryData from '@/components/custom-hook/useQueryData'
 
 const Homepage = () => {
+  const {
+    isLoading,
+    isFetching,
+    error,
+    data: result,
+  } = useQueryData(
+    `/v2/blog`, // endpoint
+    "get", // method
+    "blog"
+  );
   return (
     <>
+    <div className="p-2">
     <div className="p-4 border border-black m-4">
     <Header/>
-    <Banner/>
+    <Banner result={result}/>
     <WhatWeDo/>
-    <Work/>
-    <Values/>
-    <LatestNews/>
+    <Work result={result}/>
+    <Values result={result}/>
+    <News title="Latest News" result={result}/>
     <Footer/>
+    </div>
     </div>
     </>
   )
